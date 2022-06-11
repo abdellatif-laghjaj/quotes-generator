@@ -59,3 +59,14 @@ function copyQuote(){
         time: 2
     });
 }
+
+//initialize the floating button
+const floatElement = document.querySelector('.float-element');
+
+floatElement.addEventListener('click', () => {
+    changeTheme("#3ed21ad0");
+});
+
+function changeTheme(color){
+    document.documentElement.style.setProperty('--bg-color', color);
+}
