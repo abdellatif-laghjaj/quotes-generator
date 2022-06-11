@@ -13,6 +13,10 @@ speechBtn.addEventListener('click', quoteToSpeech);
 copyBtn.addEventListener('click', copyQuote);
 
 
+//get a random quote on load
+getRandomQuote();
+
+
 //get a random quote
 function getRandomQuote(){
     newQuoteBtn.textContent = "Loading...";

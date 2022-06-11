@@ -61,6 +61,7 @@ body{
 .main .container .content .quote p{
     text-align: center;
     transition: 0.4s;
+    font-size: 20px;
 }
 
 .main .container .quote-icon{
@@ -168,6 +169,9 @@ body{
     margin-left: 10px;
     font-size: 22px;
 }
+
+
+/* for small screens */
 
 
 
