@@ -7,13 +7,32 @@ const facbookShareBtn = document.querySelector('.facebook-share-btn');
 const speechBtn = document.querySelector('.speech-btn');
 const copyBtn = document.querySelector('.copy-btn');
 
-newQuoteBtn.addEventListener('click', clickHandler);
-facbookShareBtn.addEventListener('click', clickHandler);
-speechBtn.addEventListener('click', clickHandler);
-copyBtn.addEventListener('click', clickHandler);
+newQuoteBtn.addEventListener('click', getRandomQuote);
+facbookShareBtn.addEventListener('click', shareToFacebook);
+speechBtn.addEventListener('click', quoteToSpeech);
+copyBtn.addEventListener('click', copyQuote);
 
 
-function clickHandler(e) {
-    e.preventDefault();
-    console.log('clicked');
+//get a random quote
+function getRandomQuote(){
+    fetch("https://api.quotable.io/random")
+    .then(res => res.json())
+    .then(result => {
+        console.log(result);
+    });
+}
+
+//share the quote to facboook
+function shareToFacebook(){
+    console.log("");
+}
+
+//generate the speech of the quote
+function quoteToSpeech(){
+    console.log("");
+}
+
+//copy the quote to the clipbord
+function copyQuote(){
+    console.log("");
 }
