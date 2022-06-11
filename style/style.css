@@ -173,7 +173,33 @@ body{
 
 /* for small screens */
 
+@media only screen and (max-width: 600px){
+    .main{
+        max-width: 90%;
+        min-width: 90%;
+    }
+    .main .container .content .quote p{
+        font-size: 18px;
+    }
+    .main .container .author{
+        font-size: 14px;
+    }
+}
 
+@media screen and (max-width: 400px){
+    .main .container .btns .new-btn .btn{
+        font-size: 12px;
+        padding: 10px;
+    }
 
+    .main .container .btns .tools-btns .btn:not(:last-child){
+        margin-right: 5px;
+    }
+    
+    .main .container .btns .tools-btns .btn{
+        font-size: 14px;
+        padding: 10px;
+    }
+}
 
 

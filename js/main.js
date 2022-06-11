@@ -25,7 +25,7 @@ function getRandomQuote(){
     .then(res => res.json())
     .then(result => {
         quote.textContent = result.content;
-        author.textContent = result.author;
+        author.textContent = "_ " + result.author;
         newQuoteBtn.innerHTML = "New Quote" + "<ion-icon name='add-circle-outline'></ion-icon>";
         newQuoteBtn.classList.remove('disabled');
     });
