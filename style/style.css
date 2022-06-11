@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root{
-    --bg-color: #e91e1e;
+    --bg-color: #3b4ad8;
+    --bg-color-2: #8c99d4;
+    --card-color: rgb(238, 238, 238);
     --border-radius: 10px;
     --main-padding: 20px;
     --text-color: #fff;
+    --box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    --main-margin: 20px; 
 }
 
 *{
@@ -17,7 +21,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     height: 100vh;
-    background: #f5f5f5;
+    background: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +29,110 @@ body{
 
 .main{
     max-width: 598px;
-    background-color: var(--bg-color);
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: var(--border-radius);
     padding: var(--main-padding);
     color: var(--text-color);
+    box-shadow: var(--box-shadow);
+    margin: var(--main-margin);
+}
+
+.main .header h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
     text-align: center;
 }
+
+.main .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.main .container .quote-icon{
+    font-size: 30px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.main .container .quote-icon-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -30px;
+}
+
+.main .container .quote-icon-right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-top: -30px;
+}
+
+.main .container .content{
+    padding-left: var(--main-padding);
+    margin-top: 10px;
+}
+
+.main .container .btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.main .container .btns .tools-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .btns .tools-btns .btn:not(:last-child){
+    margin-right: var(--main-margin);
+}
+
+.main .container .btns .tools-btns .btn{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 12px;
+    border: 1px solid var(--bg-color);
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .container .btns .new-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .container .btns .new-btn .btn{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 12px 18px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 
