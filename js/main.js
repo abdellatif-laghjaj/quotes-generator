@@ -15,11 +15,15 @@ copyBtn.addEventListener('click', copyQuote);
 
 //get a random quote
 function getRandomQuote(){
+    newQuoteBtn.textContent = "Loading...";
+    newQuoteBtn.classList.add('disabled');
     fetch("https://api.quotable.io/random")
     .then(res => res.json())
     .then(result => {
         quote.textContent = result.content;
         author.textContent = result.author;
+        newQuoteBtn.innerHTML = "New Quote" + "<ion-icon name='add-circle-outline'></ion-icon>";
+        newQuoteBtn.classList.remove('disabled');
     });
 }
 
@@ -35,5 +39,7 @@ function quoteToSpeech(){
 
 //copy the quote to the clipbord
 function copyQuote(){
-    console.log("");
+    //copy the quote to the clipboard
+    const text = quote.textContent;
+
 }

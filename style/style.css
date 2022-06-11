@@ -9,6 +9,7 @@
     --text-color: #fff;
     --box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     --main-margin: 20px; 
+    --transition-time: all 0.3s;
 }
 
 *{
@@ -29,6 +30,7 @@ body{
 
 .main{
     max-width: 598px;
+    min-width: 598px;
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 1.5px );
@@ -54,6 +56,11 @@ body{
     flex-direction: column;
     justify-content: center;
     position: relative;
+}
+
+.main .container .content .quote p{
+    text-align: center;
+    transition: 0.4s;
 }
 
 .main .container .quote-icon{
@@ -120,6 +127,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition-time);
 }
 
 .main .container .btns .new-btn{
@@ -139,7 +147,21 @@ body{
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    transition: var(--transition-time);
+}
+.main .container .btns .new-btn .btn.disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.main .container .btns .btn:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.main .container .btns .new-btn .btn:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 .main .container .btns .new-btn .btn ion-icon{
