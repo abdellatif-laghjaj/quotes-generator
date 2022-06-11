@@ -59,21 +59,31 @@ body{
 .main .container .quote-icon{
     font-size: 30px;
     color: var(--text-color);
-    margin-bottom: 20px;
 }
 
 .main .container .quote-icon-left{
-    position: absolute;
     left: 0;
     top: 0;
-    margin-top: -30px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .main .container .quote-icon-right{
-    position: absolute;
     right: 0;
     bottom: 0;
-    margin-top: -30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.main .container .author{
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 20px;
+    display: flex;
+    margin-top: 12px;
+    justify-content: flex-end;
 }
 
 .main .container .content{
@@ -130,6 +140,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main .container .btns .new-btn .btn ion-icon{
+    margin-left: 10px;
+    font-size: 22px;
 }
 
 
