@@ -51,4 +51,11 @@ function copyQuote(){
     //copy the quote to the clipboard
     const text = quote.textContent;
     navigator.clipboard.writeText(text);
+
+    //show the copy success message
+    notie.alert({
+        type: 'success',
+        text: 'Quote copied to clipboard',
+        time: 2
+    });
 }
