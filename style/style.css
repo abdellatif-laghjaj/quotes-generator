@@ -171,6 +171,32 @@ body {
     font-size: 22px;
 }
 
+/* COLOR PICKER */
+
+.color-palette {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--main-margin);
+    right: 0;
+    background-color: var(--bg-color-2);
+    border-radius: 30px;
+    padding: var(--main-padding) 16px;
+    text-align: center;
+}
+
+.color-palette .theme-color{
+    background-color: red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.color-palette .theme-color:not(:last-child){
+    margin-bottom: 10px;
+}
+
 
 /* for small screens */
 
