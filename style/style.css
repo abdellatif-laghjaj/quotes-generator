@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
-:root{
+:root {
     --bg-color: #3b4ad8;
     --bg-color-2: #8c99d4;
     --card-color: rgb(238, 238, 238);
     --border-radius: 10px;
     --main-padding: 20px;
     --text-color: #fff;
-    --box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    --main-margin: 20px; 
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    --main-margin: 20px;
     --transition-time: all 0.3s;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     height: 100vh;
@@ -28,15 +28,15 @@ body{
     align-items: center;
 }
 
-.main{
+.main {
     max-width: 598px;
     min-width: 598px;
-    background: rgba( 255, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 1.5px );
-    -webkit-backdrop-filter: blur( 1.5px );
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: var(--border-radius);
     padding: var(--main-padding);
     color: var(--text-color);
@@ -44,39 +44,39 @@ body{
     margin: var(--main-margin);
 }
 
-.main .header h3{
+.main .header h3 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.main .container{
+.main .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 }
 
-.main .container .content .quote p{
+.main .container .content .quote p {
     text-align: center;
     transition: 0.4s;
     font-size: 20px;
 }
 
-.main .container .quote-icon{
+.main .container .quote-icon {
     font-size: 30px;
     color: var(--text-color);
 }
 
-.main .container .quote-icon-left{
+.main .container .quote-icon-left {
     left: 0;
     top: 0;
     display: flex;
     justify-content: flex-start;
 }
 
-.main .container .quote-icon-right{
+.main .container .quote-icon-right {
     right: 0;
     bottom: 0;
     display: flex;
@@ -84,7 +84,7 @@ body{
     margin-top: 10px;
 }
 
-.main .container .author{
+.main .container .author {
     font-size: 18px;
     font-weight: 300;
     font-style: italic;
@@ -94,28 +94,28 @@ body{
     justify-content: flex-end;
 }
 
-.main .container .content{
+.main .container .content {
     padding-left: var(--main-padding);
     margin-top: 10px;
 }
 
-.main .container .btns{
+.main .container .btns {
     display: flex;
     justify-content: space-between;
     margin-top: 32px;
 }
 
-.main .container .btns .tools-btns{
+.main .container .btns .tools-btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main .container .btns .tools-btns .btn:not(:last-child){
+.main .container .btns .tools-btns .btn-app:not(:last-child) {
     margin-right: var(--main-margin);
 }
 
-.main .container .btns .tools-btns .btn{
+.main .container .btns .tools-btns .btn-app {
     outline: none;
     border: none;
     font-size: 18px;
@@ -131,13 +131,13 @@ body{
     transition: var(--transition-time);
 }
 
-.main .container .btns .new-btn{
+.main .container .btns .new-btn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main .container .btns .new-btn .btn{
+.main .container .btns .new-btn .btn-app {
     outline: none;
     border: none;
     font-size: 18px;
@@ -150,22 +150,23 @@ body{
     align-items: center;
     transition: var(--transition-time);
 }
-.main .container .btns .new-btn .btn.disabled{
+
+.main .container .btns .new-btn .btn-app.disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
 
-.main .container .btns .btn:hover{
+.main .container .btns .btn-app:hover {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-.main .container .btns .new-btn .btn:hover{
+.main .container .btns .new-btn .btn-app:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
 
-.main .container .btns .new-btn .btn ion-icon{
+.main .container .btns .new-btn .btn-app ion-icon {
     margin-left: 10px;
     font-size: 22px;
 }
@@ -173,30 +174,32 @@ body{
 
 /* for small screens */
 
-@media only screen and (max-width: 600px){
-    .main{
+@media only screen and (max-width: 600px) {
+    .main {
         max-width: 90%;
         min-width: 90%;
     }
-    .main .container .content .quote p{
+
+    .main .container .content .quote p {
         font-size: 18px;
     }
-    .main .container .author{
+
+    .main .container .author {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width: 400px){
-    .main .container .btns .new-btn .btn{
+@media screen and (max-width: 460px) {
+    .main .container .btns .new-btn .btn-app {
         font-size: 12px;
         padding: 10px;
     }
 
-    .main .container .btns .tools-btns .btn:not(:last-child){
+    .main .container .btns .tools-btns .btn-app:not(:last-child) {
         margin-right: 5px;
     }
-    
-    .main .container .btns .tools-btns .btn{
+
+    .main .container .btns .tools-btns .btn-app {
         font-size: 14px;
         padding: 10px;
     }
