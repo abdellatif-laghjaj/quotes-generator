@@ -191,6 +191,7 @@ body {
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .color-palette .theme-color:not(:last-child){

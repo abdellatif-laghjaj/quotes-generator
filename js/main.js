@@ -60,12 +60,33 @@ function copyQuote(){
     });
 }
 
-//initialize the floating button
-const floatElement = document.querySelector('.float-element');
+//color palette
+const colors = [
+    '#e6194b',
+    '#3cb44b',
+    '#ffe119',
+    '#4363d8',
+    '#f58231',
+    '#911eb4',
+    '#46f0f0',
+    '#bcf60c',
+    '#fabebe',
+    '#008080',
+];
 
-floatElement.addEventListener('click', () => {
-    changeTheme("#3ed21ad0");
+const colorBtns = document.querySelectorAll('.theme-color');
+
+//loop through colors array and set each color to a button
+for(let i = 0; i < colorBtns.length; i++){
+    colorBtns[i].style.backgroundColor = colors[i];
+}
+
+colorBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        changeTheme(btn.style.backgroundColor);
+    });
 });
+
 
 function changeTheme(color){
     document.documentElement.style.setProperty('--bg-color', color);
