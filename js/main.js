@@ -41,7 +41,7 @@ function tweeQuote(){
 //generate the speech of the quote
 function quoteToSpeech(){
     const text = quote.textContent;
-    const utterance = new SpeechSynthesisUtterance(text + " by " + author.textContent);
+    const utterance = new SpeechSynthesisUtterance(text + " by " + author.textContent.replace("_", ""));
     utterance.lang = 'en-US';
     speechSynthesis.speak(utterance);
 }
