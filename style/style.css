@@ -261,6 +261,16 @@ body {
 
     .color-palette{
         width: 300px;
+        padding: 0 10px;
+    }
+
+    .color-palette .theme-color{
+        width: 24px;
+        height: 24px;
+    }
+
+    .color-palette .theme-color:not(:last-child){
+        margin-right: 10px;
     }
 }
 
