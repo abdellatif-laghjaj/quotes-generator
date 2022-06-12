@@ -201,6 +201,16 @@ body {
 
 /* for small screens */
 
+@media screen and (max-width: 797px) {
+    .color-palette{
+        display: flex;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .main {
         max-width: 90%;
