@@ -60,6 +60,9 @@ function copyQuote(){
     });
 }
 
+//get the theme from local storage
+getTheme();
+
 //color palette
 const colors = [
     'hsl(345, 80%, 50%)',
@@ -89,4 +92,19 @@ colorBtns.forEach(btn => {
 
 function changeTheme(color){
     document.documentElement.style.setProperty('--bg-color', color);
+    saveTheme(color);
+}
+
+
+//get the theme from local storage
+function getTheme(){
+    const theme = localStorage.getItem('theme');
+    if(theme){
+        changeTheme(theme);
+    }
+}
+
+//save the theme to local storage
+function saveTheme(color){
+    localStorage.setItem('theme', color);
 }
