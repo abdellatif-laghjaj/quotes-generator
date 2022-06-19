@@ -202,6 +202,29 @@ body {
     margin-bottom: 10px;
 }
 
+/* COPYRIGHT */
+
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--main-padding);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.copyright p a{
+    color: var(--text-color);
+    text-decoration: none;
+}
 
 /* for small screens */
 
