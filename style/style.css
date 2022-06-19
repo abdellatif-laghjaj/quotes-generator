@@ -206,7 +206,7 @@ body {
 
 .copyright{
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -224,6 +224,7 @@ body {
 .copyright p a{
     color: var(--text-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 /* for small screens */
